@@ -10,7 +10,6 @@
 <p align="center">
   <img src="images/JS-logo.svg" width="20px">
   <img src="images/TS-logo.svg" width="20px">
-  <img src="https://img.shields.io/npm/v/@maptiler/client"></img>
 </p>
 
 # API Client Library for JavaScript / TypeScript

@@ -736,7 +736,7 @@ function tr(_0, _1) {
 }
 function saveDataToCache(data, to, from, originalText = "") {
   const langKey = `${from}_${to}`;
-  let cache = translationsCache.get(langKey) || {};
+  const cache = translationsCache.get(langKey) || {};
   if (typeof data === "string") {
     const keyHash = simpleHash(originalText);
     cache[keyHash] = data;
@@ -762,12 +762,12 @@ function find(key, to, from) {
     from = lastFromLanguage || "en";
   }
   const langKey = `${from}_${to}`;
-  let data = translationsCache.get(langKey) || {};
+  const data = translationsCache.get(langKey) || {};
   if (!data) {
     return key;
   }
-  let value = data[key];
-  if (!!value) {
+  const value = data[key];
+  if (value) {
     return value;
   }
   const keyHash = simpleHash(key);

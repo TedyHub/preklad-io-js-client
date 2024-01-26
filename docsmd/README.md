@@ -42,7 +42,7 @@ Preklad.IO API Client
 
 #### Defined in
 
-config.ts:1
+[config.ts:1](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/config.ts#L1)
 
 ___
 
@@ -61,7 +61,7 @@ Optional
 
 #### Defined in
 
-translate.ts:9
+[translate.ts:9](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/translate.ts#L9)
 
 ## Variables
 
@@ -73,7 +73,7 @@ Configuration object
 
 #### Defined in
 
-config.ts:67
+[config.ts:67](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/config.ts#L67)
 
 ___
 
@@ -88,8 +88,8 @@ ___
 | `clearCache` | () => `void` |
 | `config` | [`ApiConfig`](classes/ApiConfig.md) |
 | `find` | (`key`: `string`, `to`: `string`, `from`: `string`) => `string` |
-| `tr` | (`translateData`: `string` \| `Object`, `toLanguage`: `string`, `fromLanguage`: `string`, `options`: [`TranslateOptions`](README.md#translateoptions)) => `Promise`\<`Object` \| `string`\> |
+| `tr` | (`translateData`: `string` \| {}, `toLanguage`: `string`, `fromLanguage`: `string`, `options`: [`TranslateOptions`](README.md#translateoptions)) => `Promise`\<`NonNullable`\<`unknown`\> \| `string`\> |
 
 #### Defined in
 
-translate.ts:250
+[translate.ts:250](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/translate.ts#L250)

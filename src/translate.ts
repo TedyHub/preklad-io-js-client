@@ -11,7 +11,7 @@ export type TranslateOptions = {
   ignoreWords?: string[]; // define words that should not be translated
 };
 
-const translationsCache = new Map<string, any>();
+const translationsCache = new Map<string, NonNullable<unknown>>();
 let lastFromLanguage = "en";
 let lastToLanguage = "";
 
@@ -23,11 +23,11 @@ let lastToLanguage = "";
  * @param options - additional parameters  {noCache: boolean, ignoreWords?: string[]}  allow  to disable caching or put ignore words that should not be translated
  */
 async function tr(
-  translateData: string | Object,
+  translateData: string | NonNullable<unknown>,
   toLanguage: string,
-  fromLanguage: string = "en",
+  fromLanguage = "en",
   options: TranslateOptions = {}
-): Promise<Object | string> {
+): Promise<NonNullable<unknown> | string> {
   // validate input data
   if (!config.apiKey) {
     throw new Error("API-KEY is not defined.");
@@ -95,14 +95,14 @@ async function tr(
  *  Cache received translations  for future use
  */
 function saveDataToCache(
-  data: string | Object,
+  data: string | NonNullable<unknown>,
   to: string,
   from: string,
-  originalText: string = ""
+  originalText = ""
 ) {
   const langKey = `${from}_${to}`;
 
-  let cache = translationsCache.get(langKey) || {};
+  const cache = translationsCache.get(langKey) || {};
   if (typeof data === "string") {
     const keyHash = simpleHash(originalText);
     cache[keyHash] = data;
@@ -139,13 +139,13 @@ function find(key: string, to: string, from: string): string {
   }
 
   const langKey = `${from}_${to}`;
-  let data = translationsCache.get(langKey) || {};
+  const data = translationsCache.get(langKey) || {};
   if (!data) {
     return key;
   }
 
-  let value = data[key];
-  if (!!value) {
+  const value = data[key];
+  if (value) {
     return value;
   }
   // try to get by hash
@@ -168,11 +168,11 @@ Load and translate several messages with the single reguest. Max request size is
  * @param ignoreWords - array of ignore words
  */
 async function translateObject(
-  translatedObject: Object,
+  translatedObject: NonNullable<unknown>,
   fromLanguage: string,
   toLanguage: string,
   ignoreWords: string[]
-): Promise<Object> {
+): Promise<NonNullable<unknown>> {
   const url = config.API_URL + "/json";
 
   const request = {
@@ -237,7 +237,7 @@ async function translateText(
   return res;
 }
 
-const simpleHash = (str) => {
+const simpleHash = (str: string): string => {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);

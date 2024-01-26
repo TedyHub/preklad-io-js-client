@@ -51,7 +51,7 @@ type TranslateOptions = {
  * @param fromLanguage - source language code,  'en' is used by default if missing
  * @param options - additional parameters  {noCache: boolean, ignoreWords?: string[]}  allow  to disable caching or put ignore words that should not be translated
  */
-declare function tr(translateData: string | Object, toLanguage: string, fromLanguage?: string, options?: TranslateOptions): Promise<Object | string>;
+declare function tr(translateData: string | NonNullable<unknown>, toLanguage: string, fromLanguage?: string, options?: TranslateOptions): Promise<NonNullable<unknown> | string>;
 /**
  * Find already translated data stored from cache. It returns key in case  translations has not been found.
  * @param key - key to translation data or  original text message in case of plain text translation
