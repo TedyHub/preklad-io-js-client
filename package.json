@@ -1,6 +1,6 @@
 {
   "name": "@tedydev/preklad-io-js-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API service for instance translation  https://preklad.io",
   "module": "dist/preklad-io-js-client.mjs",
   "types": "dist/preklad-io-js-client.d.ts",

@@ -39,4 +39,4 @@ Error.constructor
 
 #### Defined in
 
-[api-error.ts:5](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/api-error.ts#L5)
+[api-error.ts:5](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/api-error.ts#L5)

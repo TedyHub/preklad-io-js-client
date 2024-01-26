@@ -37,7 +37,7 @@ The configuration object definition
 
 #### Defined in
 
-[config.ts:20](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/config.ts#L20)
+[config.ts:20](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/config.ts#L20)
 
 ## Accessors
 
@@ -53,7 +53,7 @@ Get the API key
 
 #### Defined in
 
-[config.ts:45](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/config.ts#L45)
+[config.ts:45](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/config.ts#L45)
 
 • `set` **apiKey**(`k`): `void`
 
@@ -72,7 +72,7 @@ https://preklad.io
 
 #### Defined in
 
-[config.ts:38](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/config.ts#L38)
+[config.ts:38](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/config.ts#L38)
 
 ___
 
@@ -88,7 +88,7 @@ Get fetch function
 
 #### Defined in
 
-[config.ts:59](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/config.ts#L59)
+[config.ts:59](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/config.ts#L59)
 
 • `set` **fetch**(`f`): `void`
 
@@ -106,4 +106,4 @@ Custom fetch function
 
 #### Defined in
 
-[config.ts:52](https://github.com/TedyHub/preklad-io-js-client/blob/7e29400/src/config.ts#L52)
+[config.ts:52](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/config.ts#L52)

@@ -34,14 +34,14 @@ The project is entirely written in TypeScript and all the function arguments are
 
 # Install
 ```shell
-npm install --save @preklad-io-js/client
+npm install --save  @tedydev/preklad-io-js-client 
 ```
 
 
 # Quick start
 ```ts
 // Import the whole library
-import * as translation from '@preklad-io-js/client';
+import * as translation from ' @tedydev/preklad-io-js-client';
 
 ```
 
