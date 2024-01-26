@@ -1,0 +1,60 @@
+{
+  "name": "@preklad-io-js/client",
+  "version": "1.0.0",
+  "description": "API service for instance translation  https://preklad.io",
+  "module": "dist/preklad-io-js-client.mjs",
+  "types": "dist/preklad-io-js-client.d.ts",
+  "type": "module",
+  "author": "Tedy Development",
+  "homepage": "https://github.com/TedyHub/preklad-io-js-client",
+  "exports": {
+    "import": "./dist/preklad-io-js-client.mjs",
+    "require": "./dist/preklad-io-js-client.cjs"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "api",
+    "translate json",
+    "translate text",
+    "REST API",
+    "translate api",
+    "cloud"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/*; NODE_ENV=production rollup -c",
+    "dev": "rm -rf dist/*; NODE_ENV=development rollup -c -w",
+    "devserve": "rm -rf dist/*; NODE_ENV=development rollup -c -w & serve && fg",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
+    "lint": "eslint --fix \"src/**/*.{js,ts}\"",
+    "docmd": "rm -rf docsmd/*; typedoc --readme none --plugin typedoc-plugin-markdown --out docsmd src/index.ts",
+    "dochtml": "rm -rf docs/*; typedoc; cp -r images docs/",
+    "doc": "npm run docmd; npm run dochtml",
+    "prepare": "npm run format; npm run lint; npm run test; npm run build; npm run doc"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-json": "^5.0.1",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint": "^8.27.0",
+    "prettier": "^2.7.1",
+    "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-esbuild": "^4.10.1",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-string": "^3.0.0",
+    "rollup-plugin-swc": "^0.2.1",
+    "serve": "^14.1.1",
+    "sharp": "^0.32.6",
+    "typedoc": "^0.25.7",
+    "typedoc-plugin-markdown": "^3.17.1",
+    "typescript": "^4.8.3",
+    "vitest": "^0.34.6"
+  }
+
+}

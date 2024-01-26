@@ -1,0 +1,14 @@
+{
+  "entryPoints": ["./src/translate.ts", "src/config.ts"],
+  "name": "Preklad.IO API Client",
+  "plugin": [],
+  "out": "docs",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "excludeNotDocumented": false,
+  "excludeInternal": true,
+  "theme": "default",
+  "customCss": "typedoc.css",
+  "includeVersion": true
+}

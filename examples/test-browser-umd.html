@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>tslib</title>
+    <script src ="../dist/preklad-io-js-client.umd.js"></script>
+    <style>
+        .button {
+            background: transparent;
+            padding: 4px 12px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            box-shadow: 0px 1px 1px;
+            margin: 10px;
+        }
+
+        .result {
+            border-radius: 4px;
+            min-height: 100px;
+            width: 300px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <p>
+      This demo is using the UMD bundle.
+    </p>
+    <div>
+      <h1>Translation Example</h1>
+      <button id="button1" class="button">Translate to French</button><br/>
+      <button id="button2" class="button">Translate to German</button>
+      <h2>Output Result:</h2>
+      <div id="result" class="result">
+
+      </div>
+    </div>
+
+
+
+    
+    <script>
+        // set API key
+        prekladioClient.translation.config.apiKey = 'YOUR_API_KEY';
+        const texts  = {
+            'button.label' : 'Click this button to see results'
+        }
+
+        async function translateButtonLabelToFrench(){
+            try {
+                const result = await  prekladioClient.translation.tr(texts, 'fr');
+                document.getElementById('button1').innerHTML = result['button.label']
+            } catch (e) {
+                console.error(e);
+            }
+
+            if (result) {
+
+            }
+        }
+
+        async function translateButtonLabelToGerman(){
+            try {
+                const result = await  prekladioClient.translation.tr(texts, 'de');
+                document.getElementById('button2').innerHTML =result['button.label'];
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+
+        function addButtonClickEvent(){
+            const outputMessage = 'This is the result of button click';
+
+            document.getElementById('button1').addEventListener('click', function(){
+                prekladioClient.translation.tr(outputMessage, 'fr').then(function(result){
+                    document.getElementById('result').innerHTML = result;
+                }).catch(function(e){
+                    console.error(e);
+                });
+            });
+            document.getElementById('button2').addEventListener('click', function(){
+                prekladioClient.translation.tr(outputMessage,'de').then(function(result){
+                    document.getElementById('result').innerHTML = result;
+                }).catch(function(e){
+                    console.error(e);
+                });
+            });
+        }
+
+
+        (async () => {
+            await translateButtonLabelToFrench();
+            await translateButtonLabelToGerman();
+            addButtonClickEvent();
+        })()
+
+
+    </script>
+  </body>
+</html>
