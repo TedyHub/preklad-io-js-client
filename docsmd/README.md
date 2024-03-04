@@ -1,6 +1,6 @@
 Preklad.IO API Client
 
-# Preklad.IO API Client - v1.0.0
+# Preklad.IO API Client - v1.0.1
 
 ## Table of contents
 
@@ -42,7 +42,7 @@ Preklad.IO API Client
 
 #### Defined in
 
-[config.ts:1](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/config.ts#L1)
+[config.ts:1](https://github.com/TedyHub/preklad-io-js-client/blob/fbb2f49/src/config.ts#L1)
 
 ___
 
@@ -61,7 +61,7 @@ Optional
 
 #### Defined in
 
-[translate.ts:9](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/translate.ts#L9)
+[translate.ts:9](https://github.com/TedyHub/preklad-io-js-client/blob/fbb2f49/src/translate.ts#L9)
 
 ## Variables
 
@@ -73,7 +73,7 @@ Configuration object
 
 #### Defined in
 
-[config.ts:67](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/config.ts#L67)
+[config.ts:67](https://github.com/TedyHub/preklad-io-js-client/blob/fbb2f49/src/config.ts#L67)
 
 ___
 
@@ -92,4 +92,4 @@ ___
 
 #### Defined in
 
-[translate.ts:250](https://github.com/TedyHub/preklad-io-js-client/blob/ab72497/src/translate.ts#L250)
+[translate.ts:250](https://github.com/TedyHub/preklad-io-js-client/blob/fbb2f49/src/translate.ts#L250)

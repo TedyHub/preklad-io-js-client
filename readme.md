@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://prekald.io/client-js/">offcial page →</a><br>
+<a href="https://prekald.io/">Official page →</a><br>
   <img src="images/ex.png" width="334px">
 </p>
 
@@ -48,7 +48,7 @@ import * as translation from ' @tedydev/preklad-io-js-client';
 The [examples](examples/) folder includes are featuring usages for **NodeJS**, **browser with UMD** and **browser with ES module**.
 
 
-### Translate key-text type data  
+### Translate key-text dictionary  
 You can translate already  predefined  collection of texts:
 ```ts
 const  myText = {
